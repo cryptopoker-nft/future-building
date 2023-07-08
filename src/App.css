@@ -1,0 +1,1012 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.App {
+  max-width: 999px;
+  margin: 0 auto;
+}
+
+/* Homepage Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.darkToggle {
+  float: left;
+  cursor: pointer;
+}
+
+.mainLogo {
+  max-width: 400px;
+}
+
+.darkLogo {
+  display:none;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 17%;
+  z-index: -100;
+}
+
+
+
+
+.homeContent .Bottom a img {
+  max-width: 100%;
+}
+
+
+
+.threeCol {
+  margin: 100px auto;
+  width: 100%;
+  padding:0;
+}
+
+.threeCol li {
+  width: 90%;
+  margin-left:5%;
+  margin-right: 5%;
+  list-style: none;
+  float:left;
+
+  cursor: pointer;
+  /* border: 1px solid green; */
+}
+
+.threeCol li .bgAnim {
+  max-width: 100%;
+}
+
+.threeCol li .btnArt {
+  max-width: 100%;
+  position: relative;
+  top: -400px;
+  margin-bottom: -400px;
+}
+
+.threeCol li p {
+  position: relative;
+  top: -150px;
+  margin: 0 auto -20px auto;
+  max-width: 140px;
+
+  line-height:1.1;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  transform: rotate(-22deg);
+
+  
+}
+
+.threeCol li p.two {
+  transform: rotate(0deg);
+}
+
+.threeCol li p.three {
+  transform: rotate(22deg);
+}
+
+.bgAnim {
+  top:0;
+}
+
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .mainLogo:hover {
+    animation: logo-spin infinite 20s linear;
+  }
+
+  .bgAnim {
+    animation: logo-spin infinite 20s linear;
+  }
+
+  .bgAnim:hover {
+    animation: logo-spin infinite 10s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+
+/** profile **/
+
+.profileContainer {
+  display:flex;
+  width: 1024px;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid brown;
+}
+
+.profile .userBadge {
+  display:flex;
+  flex-direction: row;
+  padding: 10px;
+  height:160px;
+}
+
+.profile .userBadge .userImg {
+  height: 150px;
+  margin-right: 15px;
+}
+
+.profile .userDetails {
+  display:flex;
+  flex-direction: column;
+}
+
+.profile .userDetails .userTokens,
+.profile .userDetails .userScore, 
+.profile .userDetails .userName {
+  margin: 0;
+}
+
+.profile .userBadge .userName {
+  font-size: 32px;
+  font-weight:bold;
+}
+
+.profileHighlights ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+.profileHighlights li {
+  /* border: 1px solid black; */
+  background: linear-gradient(243.55deg, rgba(238, 213, 174, 0.15) -31.91%, rgba(238, 213, 174, 0.78) 102.37%);
+  /* hover button */
+  box-shadow: 0px 1px 4px rgba(217, 128, 141, 0.75), inset 0px 2px 6px rgba(244, 227, 201, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+
+  width: 30%;
+}
+
+.profileHighlights li span {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.profileHighlights li img {
+  height:40px;
+  margin-right:4px;
+}
+
+.profDetailRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.playTime {
+  margin-top: 15px;
+}
+
+.topHands {
+  margin-top: 15px;
+}
+
+.topHands, .winPct {
+  padding: 10px 20px;
+  background:#EED5AE;
+  border-radius: 10px;
+}
+
+.topHands header, .winPct header {
+  border-bottom: 2px solid brown;
+}
+
+.topHands header h2, .winPct header h2 {
+  margin: 0;
+}
+
+.winPct h3 {
+  font-size: 10px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.progressBar {
+  background: rgba(52, 35, 8, 0.78);
+  /* background: linear-gradient(243.55deg, rgba(238, 213, 174, 0.15) -31.91%, rgba(238, 213, 174, 0.78) 102.37%); */
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  height:20px;
+
+  width: 50%;
+  margin-top: 10px;
+}
+
+.progressBar>div {
+  background-color: #B3001B;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(179.7deg, #B3001B 0.26%, #2A2A2A 128.93%);
+  width: 5%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+
+.gameBar>div {
+  width: 35%;
+}
+
+.tourneyBar>div {
+  width: 70%;
+}
+
+.g2Bar>div {
+  width: 50%;
+}
+
+.t2Bar>div {
+  width: 50%;
+}
+
+.tIcon {
+  height: 24px; 
+  top: 8px;
+  position: relative;
+}
+
+/** Lobby - gameboard default styling **/
+
+.lobbyContainer {
+  background: url('/lobbyBg.png') top left no-repeat;
+  background-size: cover;
+
+}
+
+.lobbyContent {
+  padding: 5px;
+
+  display: flex;
+  flex-direction:row;
+
+  background: rgba(255,255,255,0.75);
+}
+
+.lobbyContent .leftSide {
+  flex-grow:1;
+  background: #FDF9FA;
+}
+
+.lobbyContent .rightSide {
+  flex-grow:4;
+}
+
+.userBadge {
+  padding-top: 10px;
+  background: #F1DCBB;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  margin-bottom: 20px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.sideNav {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sideNav li img {
+  border: 2px solid #EED5AE;
+  border-radius: 25px;
+  padding: 10px;
+  width: 50px;
+}
+
+.sideNav p {
+  color: black;
+}
+
+.rightSide .gameContent {
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+
+.gameHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 10px 10px 10px 30px;
+}
+
+.mainLogoContainer {
+  width: 100px;
+}
+
+.mainLogoContainer img {
+  max-width:100%;
+}
+
+.rightSideNav ul {
+  display: flex;
+  flex-direction: row;
+
+  margin: 10px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.rightSideNav li {
+  margin: 0 10px;
+}
+
+.buyCPbtn {
+  padding: 4px 20px;
+  border: 1px solid brown;
+  border-radius: 12px;
+  border-style: outset;
+  cursor: pointer;
+  background: #FDF9FA;
+  
+}
+
+.buyCPbtn:hover {
+  background: #EED5AE;
+}
+
+.buyCPbtn img {
+  height: 30px;
+}
+
+
+/** Leaderboard Styling */
+.leaderboard {
+  padding: 0px 10px;
+  border-radius: 8px;
+  background: #EED5AE;
+}
+
+
+.leaderboard .rankBadge {
+  
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(179.7deg, #B3001B 0.26%, #2A2A2A 128.93%);
+  border-radius: 5px;
+
+  color: white;
+  float: left;
+  position: relative;
+  left: 28px;
+
+  height: 20px;
+  margin: 0;
+  padding: 5px 10px;
+
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+
+  z-index: 100;
+}
+
+.leaderboard .userProfile {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+}
+
+.leaderboard .userProfile .userProfileImage {
+  position: relative;
+  margin-right: 10px;
+}
+
+.userProfileData {
+  margin: 10px 0;
+  align-items: flex-start;
+}
+
+.userProfileData h4, .userProfileData .userTokens {
+  margin: 0;
+  text-align: left;
+}
+
+.leaderboard .userProfile .userProfileImage img {
+  border-radius: 50%;
+  height: 80px
+}
+
+
+
+
+
+.scoreBoardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: top;
+  border: 1px solid #EED5AE;
+  border-radius: 8px;
+  margin-left: 30px;
+}
+
+.scoreBoardHeader {
+  padding: 20px 10px;
+
+  background: linear-gradient(243.55deg, rgba(238, 213, 174, 0.15) -31.91%, rgba(238, 213, 174, 0.78) 102.37%);
+}
+
+.gameBoardHeader {
+  padding: 20px 10px;
+
+}
+
+.scoreBoardHeader ul, .gameBoardHeader ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.scoreBoardHeader ul li, .gameBoardHeader ul li {
+  padding: 5px 10px;
+  border: 1px solid #EED5AE;
+  border-radius: 5px;
+  margin: 0 10px;
+
+}
+
+.scoreBoardHeader ul li.active {
+  background: white;
+}
+
+.scoreBoard {
+  padding-bottom: 20px;
+}
+
+.scoreBoard table {
+  width: 96%;
+  margin: 10px 2%;
+  border-collapse: collapse;
+
+  line-height: 2.5;
+  font-size: 12px;
+  color: #717171;
+
+}
+
+.scoreBoard table span {
+  color: #B3001B;
+}
+
+.scoreBoard table thead {
+  border-bottom: 1px solid gold;
+  margin-bottom: 10px;
+}
+
+.startGame {
+  background: linear-gradient(243.55deg, rgba(238, 213, 174, 0.15) -31.91%, rgba(238, 213, 174, 0.78) 102.37%);
+  border-radius: 25px;
+
+  font-size: 14px;
+  color:#B3001B;
+}
+
+
+
+.friendsListContainer {
+  display:flex;
+  flex-direction: row;
+
+  margin-top:15px;
+  margin-left:25px;
+
+  border:1px solid #EED5AE;
+  border-radius: 8px;
+  border-style: inset;
+}
+
+.friendsListHeader {
+  background: linear-gradient(243.55deg, rgba(238, 213, 174, 0.15) -31.91%, rgba(238, 213, 174, 0.78) 102.37%);
+}
+
+.friendsListHeader h3 {
+  background: white;
+  margin: 0;
+  padding: 20px 5px;
+}
+
+.friendsListHeader button {
+  background: transparent;
+  border-color:rgba(94, 85, 70, 0.15);
+  margin: 5px 10px;
+}
+
+
+.daoBadge {
+  color:white;
+  text-decoration: underline;
+  padding: 10px;
+  border-radius: 5px;
+  background: black;
+  font-weight: 700;
+  font-size: 12px;
+  float: left;
+
+  position: absolute;
+}
+
+.friendsList ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.friendsList li {
+  margin: 0 5px;
+}
+
+.friendsList li .userProfileImage img {
+  border-radius: 50%;
+  height: 90px;
+}
+
+
+
+
+
+
+
+
+
+/** Game **/
+
+.gameBoardContainer {
+  background-color: white;
+  background: white url('/img/game/boardbg.png') no-repeat;
+  background-size: 120%;
+  background-position: -120px 0px;
+}
+
+.gameBoard {
+  position: relative;
+  top: -200px;
+  margin-bottom: -200px;
+}
+
+
+.gameBoardMock {
+  max-width: 100%;
+  opacity: 0.0;
+  display: none;
+}
+
+
+.gameBoardHeader ul {
+  justify-content: flex-end;
+}
+
+.gameBoardFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+}
+
+.notificationButton {
+  width: 100%;
+}
+
+.messageInput input {
+  padding: 5px 10px;
+}
+
+.gameBoardFooterRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: self-end;
+}
+
+.notificationContainer {
+  border: 1px solid #B3001B;
+  border-radius: 5px;
+  padding: 10px;
+
+  width: 300px;
+  height: 125px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.notification {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.message .messageAvatar {
+  float: left;
+}
+
+.message .messageName {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.message .messageText {
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+}
+
+.message .messageTime {
+  text-align: right;
+  font-size: 12px;
+}
+
+.response .messageAvatar {
+  float: right;
+}
+
+.response .messageName {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  text-align: right;
+}
+
+.response .messageText {
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: right;
+}
+
+.response .messageTime {
+  text-align: left;
+  font-size: 12px;
+}
+
+
+/** Actual Gameplay **/
+
+.seats {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seats li {
+  overflow: visible;
+  float:left;
+  position: relative;
+
+  min-height: 221px;
+  min-width: 149px;
+}
+
+.seats li img {
+  width: 95px;
+    border: 4px solid lightgrey;
+    border-radius: 50%;
+}
+
+.seats li .hand {
+  position: relative;
+}
+
+.seats li .hand span {
+  position: relative;
+}
+
+.seats li .hand .card:nth-of-type(2) {
+  top: -10px;
+  right: 20px;
+}
+
+.seats li.active {
+  border: 3px solid blue;
+}
+
+/* position seats by number */
+.seats li[data-key="0"] {
+  top:10px;
+  left:22px;
+}
+
+  .seats li[data-key="0"] .hand {
+    left: 100px;
+    top: -115px;
+  }
+
+.seats li[data-key="1"] {
+  top:-150px;
+  left: 38px;
+}
+
+  .seats li[data-key="1"] .hand {
+    left: 100px;
+    top: -50px;
+  }
+
+.seats li[data-key="2"] {
+  top:-147px;
+  left:188px;
+}
+
+  .seats li[data-key="2"] .hand {
+    left: 100px;
+    top: -50px;
+  }
+
+.seats li[data-key="3"] {
+  top:-100px;
+  left:300px;
+}
+
+
+.seats li[data-key="4"] {
+  top: 120px;
+  left: 250px;
+}
+
+  .seats li[data-key="4"] .hand {
+    right: 70px;
+    top: -100px;
+  }
+
+.seats li[data-key="5"] {
+  top: 330px;
+  left: -20px;
+}
+
+  .seats li[data-key="5"] .hand {
+    right: 70px;
+    top: -115px;
+  }
+
+.seats li[data-key="6"] {
+  top: 125px;
+  left: -130px;
+}
+
+  .seats li[data-key="6"] .hand {
+    right: -95px;
+    top: -170px;
+  }
+
+.seats li[data-key="7"] {
+  top: 140px;
+  left: -425px;
+}
+
+  .seats li[data-key="7"] .hand {
+    right: -20px;
+    top: -200px;
+  }
+
+.seats li[data-key="8"] {
+  top: -90px;
+  left: 135px;
+}
+
+  .seats li[data-key="8"] .hand {
+    left: 90px;
+    top: -120px;
+  }
+
+.seats li[data-key="9"] {
+  top: -225px;
+  left: -130px;
+}
+
+  .seats li[data-key="9"] .hand {
+    right: -125px;
+    top: -130px;
+  }
+
+.seats li .playerContainer {
+  float:left;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 5px;
+  list-style: none;
+}
+
+.seats .card {
+  padding: 20px 10px;
+  border-radius: 5px;
+  background: linear-gradient(243.55deg, rgba(238, 213, 174, 0.15) -31.91%, rgba(238, 213, 174, 0.78) 102.37%);
+  border: 1px solid #EED5AE;
+}
+
+.seats .card.revealed {
+  background: white;
+}
+
+.playerField {
+  display:block;  
+  position: relative;
+  top:150px;
+  margin-bottom:150px;
+
+}
+
+
+
+
+.gameInfo {
+  position: absolute;
+  top:200px;
+  left:350px;
+
+  list-style: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+.communityCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 150px 0 30px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 36px;
+
+  position: relative;
+  top: -467px;
+}
+
+.communityCards li {
+  margin: 0 10px;
+}
+
+.communityCards .card {
+  padding: 20px 10px;
+  border-radius: 5px;
+  background: linear-gradient(243.55deg, rgba(238, 213, 174, 0.15) -31.91%, rgba(238, 213, 174, 0.78) 102.37%);
+  border: 1px solid #EED5AE;
+}
+
+.stakeHandBtn {
+  color:blue;
+  font-weight: bold;
+  margin:3px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+.rankBadge {
+  color:white;
+  padding: 10px;
+  border-radius: 5px;
+  background: black;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+
+
+
+/* mobile viewport (is the default) */
+@media (max-width: 576px) {
+
+  /* remove these rules if user has a larger than mobile viewport */
+  
+}
+
+/* tablet viewport */
+@media (min-width: 768px) {
+  .threeCol li {
+    width: 29%;
+    margin-left:4%;
+    margin-right: 0%;
+  }
+}
+
+/* widescreen viewport */
+@media (min-width: 1200px) {
+
+}
